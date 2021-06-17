@@ -144,9 +144,9 @@ public class Record {
         }
         return(newDateOfJoining);
     }
-    private ArrayList<String> enterTechnologies(){
+    private List<String> enterTechnologies(){
         System.out.println("Enter technologies (enter \'end\' to end entering technologies):");
-        ArrayList<String> newTechnologies = new ArrayList<String>();
+        List<String> newTechnologies = new ArrayList<String>();
         while(true){
             String temp = enterString();
             temp = temp.toLowerCase();
@@ -220,9 +220,9 @@ public class Record {
                     } catch (ParseException e) {
                         e.printStackTrace();
                     }
-                    ArrayList<String> newTechnologies = enterTechnologies();
+                    List<String> newTechnologies = enterTechnologies();
                     Employee newManager = enterManager();
-                    ArrayList<Employee> newReportees = new ArrayList<Employee>();
+                    List<Employee> newReportees = new ArrayList<Employee>();
 
                     Employee newEmployee = new Employee(newID, newName, newAddress, newContactInformation, newDepartment, newSalary, newDesignation, newDateOfJoining, newTechnologies, newManager, newReportees);
                     noOfEmployees++;
@@ -326,7 +326,7 @@ public class Record {
                     newEmployee.setDateOfJoining(newDateOfJoining);
                 }
                 else if (editCommand == 9) {
-                    ArrayList<String> newTechnologies = enterTechnologies();
+                    List<String> newTechnologies = enterTechnologies();
                     newEmployee.setTechnologies(newTechnologies);
                 }
                 else if (editCommand == 10) {
@@ -347,12 +347,12 @@ public class Record {
                             }
                             if (check == -1) {
                                 if (newManager != null){
-                                    ArrayList<Employee> newManagerReportees = newManager.getReportees();
+                                    List<Employee> newManagerReportees = newManager.getReportees();
                                     newManagerReportees.remove(newEmployee);
                                 }
                                 int newManagerIndex = employeeIDs.indexOf(newManagerID);
                                 newManager = employee.get(newManagerIndex);
-                                ArrayList<Employee> newManagerReportees = newManager.getReportees();
+                                List<Employee> newManagerReportees = newManager.getReportees();
                                 newManagerReportees.add(newEmployee);
                                 newEmployee.setManager(newManager);
                             }
@@ -361,7 +361,7 @@ public class Record {
                     else {
                         if (newManagerID == -1) {
                             if (newManager != null){
-                                ArrayList<Employee> newManagerReportees = newManager.getReportees();
+                                List<Employee> newManagerReportees = newManager.getReportees();
                                 newManagerReportees.remove(newEmployee);
                             }
                             newManager = null;
@@ -391,9 +391,9 @@ public class Record {
             Employee newEmployeeManager = newEmployee.getManager();
             if (newEmployeeManager != null)
             {
-                ArrayList<Employee> newEmployeeManagerReportees = newEmployeeManager.getReportees();
+                List<Employee> newEmployeeManagerReportees = newEmployeeManager.getReportees();
                 newEmployeeManagerReportees.remove(newEmployee);
-                ArrayList<Employee> newEmployeeReportees = newEmployee.getReportees();
+                List<Employee> newEmployeeReportees = newEmployee.getReportees();
                 for (Employee itr : newEmployeeReportees) {
                     Employee newEmployeeReporteeManager = newEmployeeManager;
                     newEmployeeManagerReportees.add(itr);
@@ -401,7 +401,7 @@ public class Record {
                 }
             }
             else{
-                ArrayList<Employee> newEmployeeReportees = newEmployee.getReportees();
+                List<Employee> newEmployeeReportees = newEmployee.getReportees();
                 for (Employee itr : newEmployeeReportees) {
                     Employee newEmployeeReporteeManager = null;
                     itr.setManager(newEmployeeReporteeManager);
