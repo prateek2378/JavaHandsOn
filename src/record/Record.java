@@ -4,8 +4,8 @@ import java.util.*;
 import java.text.*;
 
 public class Record {
-    private ArrayList<Employee> employee;
-    private ArrayList<Integer> employeeIDs;
+    private List<Employee> employee;
+    private List<Integer> employeeIDs;
     private int noOfEmployees;
 
     public Record(){
