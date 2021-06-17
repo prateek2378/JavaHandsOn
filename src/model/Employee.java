@@ -11,9 +11,9 @@ public class Employee {
     private double salary;
     private String designation;
     private Date dateOfJoining;
-    private ArrayList<String> technologies;
+    private List<String> technologies;
     private Employee manager;
-    private ArrayList<Employee> reportees;
+    private List<Employee> reportees;
 
     public Employee(int newID, String newName, Address newAddress, ContactInformation newContactInformation, Department newDepartment, double newSalary, String newDesignation, Date newDateOfJoining, ArrayList<String> newTechnologies, Employee newManager, ArrayList<Employee> newReportees){
         ID = newID;
