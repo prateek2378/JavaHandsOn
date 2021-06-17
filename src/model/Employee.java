@@ -77,7 +77,7 @@ public class Employee {
     public void setDateOfJoining(Date newDateOfJoining){
         dateOfJoining = newDateOfJoining;
     }
-    public ArrayList<String> getTechnologies(){
+    public List<String> getTechnologies(){
         return(technologies);
     }
     public void setTechnologies(ArrayList<String> newTechnologies){
@@ -89,7 +89,7 @@ public class Employee {
     public void setManager(Employee newManager){
         manager = newManager;
     }
-    public ArrayList<Employee> getReportees(){
+    public List<Employee> getReportees(){
         return(reportees);
     }
     public void setReportees(ArrayList<Employee> newReportees){
