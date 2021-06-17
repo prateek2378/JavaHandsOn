@@ -15,7 +15,7 @@ public class Employee {
     private Employee manager;
     private List<Employee> reportees;
 
-    public Employee(int newID, String newName, Address newAddress, ContactInformation newContactInformation, Department newDepartment, double newSalary, String newDesignation, Date newDateOfJoining, ArrayList<String> newTechnologies, Employee newManager, ArrayList<Employee> newReportees){
+    public Employee(int newID, String newName, Address newAddress, ContactInformation newContactInformation, Department newDepartment, double newSalary, String newDesignation, Date newDateOfJoining, List<String> newTechnologies, Employee newManager, List<Employee> newReportees){
         ID = newID;
         name = newName;
         address = newAddress;
@@ -80,7 +80,7 @@ public class Employee {
     public List<String> getTechnologies(){
         return(technologies);
     }
-    public void setTechnologies(ArrayList<String> newTechnologies){
+    public void setTechnologies(List<String> newTechnologies){
         technologies = newTechnologies;
     }
     public Employee getManager(){
@@ -92,7 +92,7 @@ public class Employee {
     public List<Employee> getReportees(){
         return(reportees);
     }
-    public void setReportees(ArrayList<Employee> newReportees){
+    public void setReportees(List<Employee> newReportees){
         reportees = newReportees;
     }
 
