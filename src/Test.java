@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Test {
     private static int noOfRecords = 0;
-    private static ArrayList<Record> records = new ArrayList<Record>();
+    private static List<Record> records = new ArrayList<Record>();
     private static int activeRecord = -1;
 
     private static void createNewRecord(){
