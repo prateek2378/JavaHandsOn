@@ -11,11 +11,11 @@ public class Employee {
     private double salary;
     private String designation;
     private Date dateOfJoining;
-    private ArrayList<String> technologies;
+    private List<String> technologies;
     private Employee manager;
-    private ArrayList<Employee> reportees;
+    private List<Employee> reportees;
 
-    public Employee(int newID, String newName, Address newAddress, ContactInformation newContactInformation, Department newDepartment, double newSalary, String newDesignation, Date newDateOfJoining, ArrayList<String> newTechnologies, Employee newManager, ArrayList<Employee> newReportees){
+    public Employee(int newID, String newName, Address newAddress, ContactInformation newContactInformation, Department newDepartment, double newSalary, String newDesignation, Date newDateOfJoining, List<String> newTechnologies, Employee newManager, List<Employee> newReportees){
         ID = newID;
         name = newName;
         address = newAddress;
@@ -77,10 +77,10 @@ public class Employee {
     public void setDateOfJoining(Date newDateOfJoining){
         dateOfJoining = newDateOfJoining;
     }
-    public ArrayList<String> getTechnologies(){
+    public List<String> getTechnologies(){
         return(technologies);
     }
-    public void setTechnologies(ArrayList<String> newTechnologies){
+    public void setTechnologies(List<String> newTechnologies){
         technologies = newTechnologies;
     }
     public Employee getManager(){
@@ -89,10 +89,10 @@ public class Employee {
     public void setManager(Employee newManager){
         manager = newManager;
     }
-    public ArrayList<Employee> getReportees(){
+    public List<Employee> getReportees(){
         return(reportees);
     }
-    public void setReportees(ArrayList<Employee> newReportees){
+    public void setReportees(List<Employee> newReportees){
         reportees = newReportees;
     }
 
